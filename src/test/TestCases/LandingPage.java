@@ -7,7 +7,7 @@ public class LandingPage extends LandingPagePo{
     @Test
     public void Landinpagevalidation()
     {
-//tesr
+
         VerifyUserisabletolandinlandinpage();
 
 
