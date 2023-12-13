@@ -3,7 +3,7 @@ import org.testng.Assert;
 
 public class LandingPagePo extends BasePage {
 
-private String rdbuslogo="(//div[@id='rdc-header']//img)[2]";
+private String rdbuslogo="(//div[@id='rdc-header']//img)[1]";
 
 
 

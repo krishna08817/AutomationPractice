@@ -13,7 +13,7 @@ public class BasePage {
 
     {
 
-        driver.get("");
+        driver.get("  ");
 
 
     }
