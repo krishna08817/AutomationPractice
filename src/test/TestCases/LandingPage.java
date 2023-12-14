@@ -4,7 +4,7 @@ import org.testng.annotations.Test;
 
 public class LandingPage extends LandingPagePo{
 
-    @Test
+    @Test(description="Verify user is able to navigate to landing page")
     public void Landinpagevalidation()
     {
         VerifyUserisabletolandinlandinpage();

@@ -6,7 +6,6 @@ import org.testng.annotations.BeforeClass;
 
 public class BasePage {
     WebDriver driver = new ChromeDriver();
-
     @BeforeClass
     public void dirverinitialization() {
         driver.get("http://redbus.com");
