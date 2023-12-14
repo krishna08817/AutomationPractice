@@ -15,4 +15,10 @@ public class LandingPage extends LandingPagePo{
         driver.findElement((By.xpath("//input[@id='src']"))).click();
         driver.findElement((By.xpath("//input[@id='src']"))).sendKeys("Hyderabad");
     }
+
+    @Test
+    public void promocode()
+    {
+        //place holder for promocode validations
+    }
 }
