@@ -1,24 +1,69 @@
-import org.openqa.selenium.By;
-import org.openqa.selenium.support.ui.Select;
+package TestCases;
+
 import org.testng.annotations.Test;
+import src.test.PageObjects.LandingPagePO;
 
-public class LandingPage extends LandingPagePo{
+import java.awt.*;
 
-    @Test(description="Verify user is able to navigate to landing page")
-    public void Landinpagevalidation()
+public class LandingPage extends BaseClass {
+
+    @Test
+    public void verifyBusTickets()
     {
-        VerifyUserisabletolandinlandinpage();
+        LandingPagePO lPO=new LandingPagePO(driver);
+        getUrl();
+        lPO.clickBusTickets();
+    }
+    @Test
+    public void verifyOtpisEnabled() throws InterruptedException {
+        LandingPagePO lPO=new LandingPagePO(driver);
+        getUrl();
+        lPO.clickAccount();
+        lPO.clickLogin();
+        lPO.switchToFrame();
+        lPO.enterPhoneNum("9087874047");
+
+    }
+    @Test
+    public void verifyFromInput() throws InterruptedException {
+        LandingPagePO lPO=new LandingPagePO(driver);
+        getUrl();
+        lPO.setFromStart("chennai","Koyambedu");
+
     }
 
     @Test
-    public void Searchbutton() {
-        driver.findElement((By.xpath("//input[@id='src']"))).click();
-        driver.findElement((By.xpath("//input[@id='src']"))).sendKeys("Hyderabad");
+    public void verifyToInput() throws InterruptedException {
+        LandingPagePO lPO=new LandingPagePO(driver);
+        getUrl();
+        lPO.setTodest("hyderabad","Ameerpet");
     }
-
     @Test
-    public void promocode()
-    {
-        //place holder for promocode validations
+    public void verifyDateCalender() throws InterruptedException {
+        LandingPagePO lPO=new LandingPagePO(driver);
+        getUrl();
+        lPO.clickOnDate();
+        Thread.sleep(5000);
+        // lPO.setDate("Jan","2024","6");
+        lPO.getMonthandYear();
+    }
+    @Test
+    public void verify() throws InterruptedException {
+        LandingPagePO lpo=new LandingPagePO(driver);
+        getUrl();
+        lpo.clickOnDate();
+        Thread.sleep(5000);
+        lpo.getMonthandYear();
+        lpo.dummytest();
+        Thread.sleep(5000);
+        lpo.clickOnSearchBuses();
+    }
+    @Test
+    public void verifyBookCab() throws AWTException {
+        LandingPagePO lpo=new LandingPagePO(driver);
+        getUrl();
+        // cp.scrollPagedownWithRobot();
+        lpo.clickOnBookCab();
+
     }
 }

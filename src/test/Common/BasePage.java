@@ -1,13 +1,22 @@
-import com.aventstack.extentreports.ExtentReports;
-import com.aventstack.extentreports.ExtentTest;
-import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.chrome.ChromeDriver;
-import org.testng.annotations.BeforeClass;
+package Common;
+import java.awt.*;
+import java.awt.event.KeyEvent;
 
 public class BasePage {
-    WebDriver driver = new ChromeDriver();
-    @BeforeClass
-    public void dirverinitialization() {
-        driver.get("http://redbus.com");
+
+
+    public void closeWindowWithRobotClass() throws AWTException {
+        Robot rb=new Robot();
+        rb.keyPress(KeyEvent.VK_ESCAPE);
+
     }
+    public void scrollPagedownWithRobot() throws AWTException {
+        Robot rb=new Robot();
+        rb.keyPress(KeyEvent.VK_PAGE_DOWN);
+    }
+    public void scrollPagEuPWithRobot() throws AWTException {
+        Robot rb=new Robot();
+        rb.keyPress(KeyEvent.VK_PAGE_UP);
+    }
+
 }
