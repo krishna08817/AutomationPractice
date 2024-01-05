@@ -1,11 +1,12 @@
 package TestCases;
 
+import Common.BasePage;
 import org.testng.annotations.Test;
-import src.test.PageObjects.LandingPagePO;
+import PageObjects.LandingPagePO;
 
 import java.awt.*;
 
-public class LandingPage extends BaseClass {
+public class LandingPage extends BasePage{
 
     @Test
     public void verifyBusTickets()
@@ -21,7 +22,7 @@ public class LandingPage extends BaseClass {
         lPO.clickAccount();
         lPO.clickLogin();
         lPO.switchToFrame();
-        lPO.enterPhoneNum("9087874047");
+        lPO.enterPhoneNum("personal");
 
     }
     @Test
@@ -38,32 +39,14 @@ public class LandingPage extends BaseClass {
         getUrl();
         lPO.setTodest("hyderabad","Ameerpet");
     }
-    @Test
-    public void verifyDateCalender() throws InterruptedException {
-        LandingPagePO lPO=new LandingPagePO(driver);
-        getUrl();
-        lPO.clickOnDate();
-        Thread.sleep(5000);
-        // lPO.setDate("Jan","2024","6");
-        lPO.getMonthandYear();
-    }
-    @Test
-    public void verify() throws InterruptedException {
-        LandingPagePO lpo=new LandingPagePO(driver);
-        getUrl();
-        lpo.clickOnDate();
-        Thread.sleep(5000);
-        lpo.getMonthandYear();
-        lpo.dummytest();
-        Thread.sleep(5000);
-        lpo.clickOnSearchBuses();
-    }
+
     @Test
     public void verifyBookCab() throws AWTException {
         LandingPagePO lpo=new LandingPagePO(driver);
         getUrl();
         // cp.scrollPagedownWithRobot();
         lpo.clickOnBookCab();
+        ;
 
     }
 }
