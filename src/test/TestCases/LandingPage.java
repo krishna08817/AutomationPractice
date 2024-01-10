@@ -1,7 +1,5 @@
-package TestCases;
-
 import org.testng.annotations.Test;
-import PageObjects.LandingPagePO;
+
 
 import java.awt.*;
 
